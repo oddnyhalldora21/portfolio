@@ -257,17 +257,18 @@ a {
 /* Each line of the name fades up in turn. */
 .intro__title-faded,
 .intro__title-solid {
-  animation: name-fade-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation: name-fade-in 2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .intro__title-solid {
-  animation-delay: 0.35s;
+  animation-delay: 0.3s;
 }
 
 @keyframes name-fade-in {
   from {
     opacity: 0;
-    transform: translateY(0.25em);
+    transform: translateY(0.15em);
+    filter: blur(10px);
   }
 }
 
