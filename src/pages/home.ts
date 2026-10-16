@@ -62,17 +62,7 @@ export function renderHome(): HTMLElement {
       { class: "intro", "aria-labelledby": "intro-title" },
       h("p", { class: "intro__eyebrow" }, "Hi, I'm"),
       h("h1", { id: "intro-title", class: "intro__title" }, "Oddný Halldóra"),
-      // PLACEHOLDER — replace with your own one-line description
-      h(
-        "p",
-        { class: "intro__lead" },
-        "[Placeholder] A one-line description of who you are and what you make.",
-      ),
-      h(
-        "p",
-        { class: "intro__actions" },
-        h("a", { class: "button", href: "#/contact" }, "Get in touch"),
-      ),
+      h("p", { class: "intro__lead" }, "FullStack programmer and UX/UI designer"),
     ),
     h(
       "section",
