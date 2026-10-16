@@ -60,8 +60,13 @@ export function renderHome(): HTMLElement {
     h(
       "section",
       { class: "intro", "aria-labelledby": "intro-title" },
-      h("p", { class: "intro__eyebrow" }, "Hi, I'm"),
-      h("h1", { id: "intro-title", class: "intro__title" }, "Oddný Halldóra"),
+      h(
+        "h1",
+        { id: "intro-title", class: "intro__title" },
+        h("span", { class: "intro__title-faded" }, "Oddný"),
+        " ",
+        h("span", { class: "intro__title-solid" }, "Halldóra"),
+      ),
       h("p", { class: "intro__lead" }, "FullStack programmer and UX/UI designer"),
     ),
     h(
