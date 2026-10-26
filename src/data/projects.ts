@@ -4,7 +4,9 @@
  *
  * - `image` is optional. Put image files in /public/images/ and reference
  *   them as "/images/my-project.jpg", or use a full https:// URL.
- * - `link` is optional. If set, the card links to it.
+ * - `link` is optional. If set, the card links to it (opens in a new tab).
+ * - `page` is optional. If set, the card links to that page on this site,
+ *   e.g. "/projects/sweet-treats". It takes priority over `link`.
  * - `status` is optional. `kind` sets the style ("live" or "in-development"),
  *   `label` is the text shown on the card.
  */
@@ -19,6 +21,7 @@ export interface Project {
   image?: string;
   imageAlt?: string;
   link?: string;
+  page?: string;
   tags?: string[];
   status?: ProjectStatus;
 }
@@ -38,6 +41,7 @@ export const projects: Project[] = [
     description:
       "A baking and dessert recipe app with around 300 recipes. You can save favourites into collections and add your own recipes with photos, notes and bake times.",
     tags: ["Flutter", "Dart", "Riverpod", "Supabase"],
+    page: "/projects/sweet-treats",
   },
   {
     // PLACEHOLDER — replace with a real project

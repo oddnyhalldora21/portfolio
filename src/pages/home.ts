@@ -15,7 +15,14 @@ function projectCard(project: Project): HTMLElement {
       )
     : null;
 
-  const title = project.link
+  const title = project.page
+    ? h(
+        "a",
+        { class: "card__link", href: `#${project.page}` },
+        project.title,
+        h("span", { class: "card__arrow", "aria-hidden": "true" }, " →"),
+      )
+    : project.link
     ? h(
         "a",
         {
@@ -41,7 +48,7 @@ function projectCard(project: Project): HTMLElement {
 
   return h(
     "li",
-    { class: `card${project.link ? " card--linked" : ""}` },
+    { class: `card${project.page || project.link ? " card--linked" : ""}` },
     media,
     h(
       "div",
