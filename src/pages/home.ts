@@ -46,6 +46,13 @@ function projectCard(project: Project): HTMLElement {
     h(
       "div",
       { class: "card__body" },
+      project.status
+        ? h(
+            "p",
+            { class: `card__status card__status--${project.status.kind}` },
+            project.status.label,
+          )
+        : null,
       h("h3", { class: "card__title" }, title),
       h("p", { class: "card__desc" }, project.description),
       tags,
@@ -72,7 +79,7 @@ export function renderHome(): HTMLElement {
     h(
       "section",
       { class: "projects", "aria-labelledby": "projects-title" },
-      h("h2", { id: "projects-title", class: "section-title" }, "Selected work"),
+      h("h2", { id: "projects-title", class: "section-title" }, "Projects"),
       h("ul", { class: "grid", role: "list" }, ...projects.map(projectCard)),
     ),
   );

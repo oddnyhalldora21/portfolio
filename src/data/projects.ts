@@ -5,7 +5,14 @@
  * - `image` is optional. Put image files in /public/images/ and reference
  *   them as "/images/my-project.jpg", or use a full https:// URL.
  * - `link` is optional. If set, the card links to it.
+ * - `status` is optional. `kind` sets the style ("live" or "in-development"),
+ *   `label` is the text shown on the card.
  */
+export interface ProjectStatus {
+  kind: "live" | "in-development";
+  label: string;
+}
+
 export interface Project {
   title: string;
   description: string;
@@ -13,23 +20,24 @@ export interface Project {
   imageAlt?: string;
   link?: string;
   tags?: string[];
+  status?: ProjectStatus;
 }
 
 export const projects: Project[] = [
   {
-    // PLACEHOLDER — replace with a real project
-    title: "Placeholder project one",
+    title: "Llum Studio",
+    status: { kind: "live", label: "Live" },
     description:
-      "A short description of what this project is, what you did and why it matters. One or two sentences is plenty.",
-    tags: ["Design", "Research"],
-    link: "https://example.com",
+      "An e-commerce site for a lighting brand, with product browsing, cart and checkout, designed with an editorial feel.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
+    link: "https://llum-studio.vercel.app/",
   },
   {
-    // PLACEHOLDER — replace with a real project
-    title: "Placeholder project two",
+    title: "Sweet Treats",
+    status: { kind: "in-development", label: "MVP · In development" },
     description:
-      "Another example. This one has no link, so the card is not clickable — that's fine too.",
-    tags: ["Writing"],
+      "A baking and dessert recipe app with around 300 recipes. You can save favourites into collections and add your own recipes with photos, notes and bake times.",
+    tags: ["Flutter", "Dart", "Riverpod", "Supabase"],
   },
   {
     // PLACEHOLDER — replace with a real project

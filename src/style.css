@@ -225,7 +225,7 @@ a {
 
 /* ---------- Intro ---------- */
 .intro {
-  margin: clamp(1rem, 6vw, 4rem) auto clamp(4rem, 10vw, 7rem);
+  margin: clamp(0rem, 2vw, 1.5rem) auto clamp(4rem, 10vw, 7rem);
   text-align: center;
 }
 
@@ -397,6 +397,39 @@ a {
 
 .card--linked:hover .card__arrow {
   transform: translate(2px, -2px);
+}
+
+.card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-faded);
+}
+
+.card__status::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Live: soft filled dot. In development: hollow ring. */
+.card__status--live {
+  color: var(--text-muted);
+}
+
+.card__status--live::before {
+  background: var(--success);
+}
+
+.card__status--in-development::before {
+  border: 1.5px solid currentColor;
 }
 
 .card__desc {
