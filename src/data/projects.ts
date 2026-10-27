@@ -7,11 +7,12 @@
  * - `link` is optional. If set, the card links to it (opens in a new tab).
  * - `page` is optional. If set, the card links to that page on this site,
  *   e.g. "/projects/sweet-treats". It takes priority over `link`.
- * - `status` is optional. `kind` sets the style ("live" or "in-development"),
+ * - `status` is optional. `kind` sets the style ("live", "in-development"
+ *   or "school"),
  *   `label` is the text shown on the card.
  */
 export interface ProjectStatus {
-  kind: "live" | "in-development";
+  kind: "live" | "in-development" | "school";
   label: string;
 }
 
@@ -45,13 +46,11 @@ export const projects: Project[] = [
     page: "/projects/sweet-treats",
   },
   {
-    // PLACEHOLDER — replace with a real project
-    title: "Placeholder project three",
+    title: "Article & Author API",
+    status: { kind: "school", label: "School project · Backend final" },
     description:
-      "An example with an image. Drop a file in /public/images/ and point `image` at it.",
-    image: "/images/placeholder.svg",
-    imageAlt: "Abstract placeholder illustration",
-    tags: ["Development"],
-    link: "https://example.com",
+      "A REST API for articles and their authors, with Zod validation and friendly, consistent error messages. My final project for the backend semester.",
+    tags: ["TypeScript", "Node.js", "Express", "Zod"],
+    page: "/projects/article-api",
   },
 ];

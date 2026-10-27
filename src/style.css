@@ -432,6 +432,12 @@ a {
   border: 1.5px solid currentColor;
 }
 
+/* School project: a small soft square. */
+.card__status--school::before {
+  border-radius: 2px;
+  background: currentColor;
+}
+
 .card__desc {
   margin: 0;
   color: var(--text-muted);
@@ -734,6 +740,103 @@ a {
   content: "○";
   margin-right: 0.75rem;
   color: var(--text-faded);
+}
+
+/* Endpoint list (API project). */
+.endpoints {
+  display: grid;
+  gap: 2rem;
+}
+
+.endpoints__list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.endpoints__list li {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 15rem) 1fr;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.endpoints__list li:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.endpoints__method {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.endpoints__method--get {
+  color: var(--success);
+}
+
+.endpoints__method--post {
+  color: var(--accent);
+}
+
+.endpoints__method--delete {
+  color: var(--error);
+}
+
+.endpoints__path {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.endpoints__text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 40rem) {
+  .endpoints__list li {
+    grid-template-columns: 4.5rem 1fr;
+  }
+  .endpoints__text {
+    grid-column: 2;
+  }
+}
+
+/* Request / response examples. */
+.code-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.code-example {
+  margin: 0;
+}
+
+.code-example__label {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-faded);
+}
+
+.code-block {
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text);
 }
 
 /* ---------- Contact ---------- */
