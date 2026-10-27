@@ -624,6 +624,16 @@ a {
   border-radius: 1rem;
 }
 
+/* App screenshots: about 25% bigger than the text column allows on
+   laptops and desktops, so the row spreads a little wider than the text. */
+@media (min-width: 64rem) {
+  .project-shots--phone {
+    --phone-row-width: min(calc(100vw - 2 * var(--gutter)), 61.5rem);
+    width: var(--phone-row-width);
+    margin-left: calc((100% - var(--phone-row-width)) / 2);
+  }
+}
+
 /* Same shape for every screenshot in a row, so captions line up. */
 .project-shots--wide .media-frame {
   aspect-ratio: 17 / 10;
