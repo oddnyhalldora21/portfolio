@@ -615,19 +615,34 @@ a {
   border-radius: 1rem;
 }
 
+/* Same shape for every screenshot in a row, so captions line up. */
+.project-shots--wide .media-frame {
+  aspect-ratio: 17 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Website screenshots: one per row on phones and tablets… */
 .project-shots--wide {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+}
+
+/* …and two big ones side by side on laptops and desktops, breaking out of
+   the text column to nearly fill the screen. */
+@media (min-width: 64rem) {
+  .project-shots--wide {
+    --wide-width: min(calc(100vw - 2 * var(--gutter)), 100rem);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: var(--wide-width);
+    margin-left: calc((100% - var(--wide-width)) / 2);
+  }
 }
 
 .project-section .project-shots {
   margin-top: 1.75rem;
 }
 
-@media (max-width: 30rem) {
-  .project-shots--wide {
-    grid-template-columns: 1fr;
-  }
-}
 
 .project-shots__caption {
   margin: 0.6rem 0 0;
