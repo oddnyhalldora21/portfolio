@@ -554,6 +554,13 @@ a {
   border-radius: 0.75rem;
 }
 
+/* Real screenshots keep their own proportions instead of being cropped. */
+.media-frame.media--wide {
+  aspect-ratio: auto;
+  height: auto;
+  border: 1px solid var(--border);
+}
+
 .project-feature-shot {
   width: 100%;
 }

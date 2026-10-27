@@ -17,16 +17,36 @@ const LIVE_URL = "https://llum-studio.vercel.app/";
  * Screenshots: put the files in /public/images/llum-studio/ and set `src`
  * below, e.g. "/images/llum-studio/homepage.png".
  */
-const homepage: Media = { label: "Homepage", alt: "The Llum Studio homepage" };
+const homepage: Media = {
+  label: "Homepage",
+  alt: "The Llum Studio homepage",
+  src: "/images/llum-studio/homepage.jpg",
+};
 
 const lightsToggle: Media[] = [
-  { label: "Lights off", alt: "The shop with the lights switched off" },
-  { label: "Lights on", alt: "The shop with the lights switched on" },
+  {
+    label: "Lights off",
+    alt: "The shop with the lights switched off",
+    src: "/images/llum-studio/shop-lights-off.jpg",
+  },
+  {
+    label: "Lights on",
+    alt: "The shop with the lights switched on",
+    src: "/images/llum-studio/shop-lights-on.jpg",
+  },
 ];
 
 const screenshots: Media[] = [
-  { label: "Product page", alt: "A Llum Studio product page" },
-  { label: "Cart drawer", alt: "The cart drawer open over the shop" },
+  {
+    label: "Product page",
+    alt: "A Llum Studio product page",
+    src: "/images/llum-studio/product-page.jpg",
+  },
+  {
+    label: "Cart drawer",
+    alt: "The cart drawer open over the shop",
+    src: "/images/llum-studio/cart-drawer.jpg",
+  },
 ];
 
 const features: { title: string; text: string }[] = [
