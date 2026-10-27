@@ -18,10 +18,22 @@ import {
 const demoVideo: Media = { label: "Demo video", alt: "Sweet Treats app demo" };
 
 const screenshots: Media[] = [
-  { label: "Home", alt: "Sweet Treats home screen" },
-  { label: "Recipe page", alt: "A recipe page in Sweet Treats" },
-  { label: "Saved", alt: "Saved recipes and collections" },
-  { label: "Profile", alt: "A profile page in Sweet Treats" },
+  { label: "Home", alt: "Sweet Treats home screen", src: "/images/sweet-treats/home.jpg" },
+  {
+    label: "Recipe page",
+    alt: "A recipe page in Sweet Treats",
+    src: "/images/sweet-treats/recipe.jpg",
+  },
+  {
+    label: "Saved",
+    alt: "Saved recipes and collections",
+    src: "/images/sweet-treats/saved.jpg",
+  },
+  {
+    label: "Profile",
+    alt: "A profile page in Sweet Treats",
+    src: "/images/sweet-treats/profile.jpg",
+  },
 ];
 
 const features: { title: string; text: string }[] = [
