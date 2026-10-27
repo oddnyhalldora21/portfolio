@@ -565,6 +565,15 @@ a {
   width: 100%;
 }
 
+/* On laptops and desktops, the main screenshot breaks out to nearly fill the screen. */
+@media (min-width: 64rem) {
+  .project-feature-shot {
+    --wide-width: min(calc(100vw - 2 * var(--gutter)), 100rem);
+    width: var(--wide-width);
+    margin-left: calc((100% - var(--wide-width)) / 2);
+  }
+}
+
 .media-frame {
   object-fit: cover;
   background: var(--surface);
