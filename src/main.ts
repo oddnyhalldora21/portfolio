@@ -3,6 +3,7 @@ import { h } from "./lib/dom";
 import { renderHome } from "./pages/home";
 import { renderContact } from "./pages/contact";
 import { renderSweetTreats } from "./pages/sweet-treats";
+import { renderLlumStudio } from "./pages/llum-studio";
 
 const SITE_NAME = "Oddný Halldóra";
 
@@ -14,6 +15,7 @@ interface Route {
 const routes: Record<string, Route> = {
   "/": { title: SITE_NAME, render: renderHome },
   "/contact": { title: `Contact — ${SITE_NAME}`, render: renderContact },
+  "/projects/llum-studio": { title: `Llum Studio — ${SITE_NAME}`, render: renderLlumStudio },
   "/projects/sweet-treats": { title: `Sweet Treats — ${SITE_NAME}`, render: renderSweetTreats },
 };
 

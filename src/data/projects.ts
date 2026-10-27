@@ -34,6 +34,7 @@ export const projects: Project[] = [
       "An e-commerce site for a lighting brand, with product browsing, cart and checkout, designed with an editorial feel.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
     link: "https://llum-studio.vercel.app/",
+    page: "/projects/llum-studio",
   },
   {
     title: "Sweet Treats",
