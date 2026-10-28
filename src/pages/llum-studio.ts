@@ -94,6 +94,7 @@ export function renderLlumStudio(): HTMLElement {
       lead: "A calm, editorial online shop for handmade lighting. Take your time, browse beautiful lamps, and flick the lights on to see them glow.",
       tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
       liveUrl: LIVE_URL,
+      liveLabel: "llum-studio live site",
     }),
 
     h("div", { class: "project-feature-shot" }, mediaBlock(homepage, "image", "wide", { showLabel: true })),

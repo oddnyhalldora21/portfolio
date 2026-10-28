@@ -81,6 +81,7 @@ export function projectHero(options: {
   lead: string;
   tags: string[];
   liveUrl?: string;
+  liveLabel?: string;
 }): HTMLElement {
   return h(
     "header",
@@ -92,25 +93,30 @@ export function projectHero(options: {
     ),
     h("h1", { class: "page-title project-hero__title" }, options.title),
     h("p", { class: "project-hero__lead" }, options.lead),
+    // Tags on the left; the live-site link (if any) at the far right.
     h(
-      "ul",
-      { class: "card__tags project-hero__tags", "aria-label": "Tags" },
-      ...options.tags.map((tag) => h("li", {}, tag)),
+      "div",
+      { class: "project-hero__meta" },
+      h(
+        "ul",
+        { class: "card__tags project-hero__tags", "aria-label": "Tags" },
+        ...options.tags.map((tag) => h("li", {}, tag)),
+      ),
+      options.liveUrl
+        ? h(
+            "a",
+            {
+              class: "project-hero__live",
+              href: options.liveUrl,
+              target: "_blank",
+              rel: "noopener noreferrer",
+            },
+            options.liveLabel ?? "Visit the live site",
+            h("span", { "aria-hidden": "true" }, " ↗"),
+            h("span", { class: "visually-hidden" }, " (opens in a new tab)"),
+          )
+        : null,
     ),
-    options.liveUrl
-      ? h(
-          "a",
-          {
-            class: "project-hero__live",
-            href: options.liveUrl,
-            target: "_blank",
-            rel: "noopener noreferrer",
-          },
-          "Visit the live site",
-          h("span", { "aria-hidden": "true" }, " ↗"),
-          h("span", { class: "visually-hidden" }, " (opens in a new tab)"),
-        )
-      : null,
   );
 }
 
