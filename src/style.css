@@ -505,7 +505,7 @@ a {
 
 /* ---------- Project page ---------- */
 .page--project {
-  max-width: 50rem;
+  max-width: 58rem;
   margin: 0 auto;
 }
 
@@ -517,6 +517,24 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+
+/* On laptops and desktops, pin the back link to the top-left corner of the
+   page, lined up with the left edge of the site (Home / Contact sit on the
+   right). On smaller screens it already sits at the left, above the title. */
+@media (min-width: 64rem) {
+  .page--project {
+    position: relative;
+  }
+
+  /* Offsets measured from the centred text column out to the site's left
+     edge and up to just below the top bar. */
+  .page--project .back-link {
+    position: absolute;
+    top: calc(1.25rem - clamp(2rem, 6vw, 4.5rem));
+    left: calc((min(100vw, var(--max-width)) - 2 * var(--gutter) - 58rem) / -2);
+    margin: 0;
+  }
 }
 
 .back-link:hover {
@@ -563,7 +581,7 @@ a {
 }
 
 .prose {
-  max-width: 40rem;
+  max-width: 46rem;
   color: var(--text-muted);
 }
 
