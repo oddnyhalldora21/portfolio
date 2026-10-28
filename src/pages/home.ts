@@ -20,7 +20,7 @@ function projectCard(project: Project): HTMLElement {
         "a",
         { class: "card__link", href: `#${project.page}` },
         project.title,
-        h("span", { class: "card__arrow", "aria-hidden": "true" }, " →"),
+        h("span", { class: "card__arrow", "aria-hidden": "true" }, "→"),
       )
     : project.link
     ? h(
@@ -32,7 +32,7 @@ function projectCard(project: Project): HTMLElement {
           rel: "noopener noreferrer",
         },
         project.title,
-        h("span", { class: "card__arrow", "aria-hidden": "true" }, " ↗"),
+        h("span", { class: "card__arrow", "aria-hidden": "true" }, "↗"),
         h("span", { class: "visually-hidden" }, " (opens in a new tab)"),
       )
     : project.title;
@@ -63,6 +63,20 @@ function projectCard(project: Project): HTMLElement {
       h("h3", { class: "card__title" }, title),
       h("p", { class: "card__desc" }, project.description),
       tags,
+      project.repo
+        ? h(
+            "a",
+            {
+              class: "card__repo",
+              href: project.repo,
+              target: "_blank",
+              rel: "noopener noreferrer",
+            },
+            "GitHub",
+            h("span", { "aria-hidden": "true" }, "↗"),
+            h("span", { class: "visually-hidden" }, " (opens in a new tab)"),
+          )
+        : null,
     ),
   );
 }

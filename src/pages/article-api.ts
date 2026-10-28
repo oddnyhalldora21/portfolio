@@ -129,7 +129,7 @@ export function renderArticleApi(): HTMLElement {
     backLink(),
 
     projectHero({
-      status: { kind: "school", label: "School project · Backend final" },
+      status: { kind: "completed", label: "Completed · Backend" },
       title: "Article & Author API",
       lead: "A tidy little REST API for articles and the people who write them. My final project for the backend semester.",
       tags: ["TypeScript", "Node.js", "Express", "Zod"],
