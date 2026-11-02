@@ -41,7 +41,7 @@ export const projects: Project[] = [
   },
   {
     title: "Sweet Treats",
-    status: { kind: "in-development", label: "In development · App Store launch planned" },
+    status: { kind: "in-development", label: "In development" },
     description:
       "A recipe app and social platform for home cooks and bakers. Share what you make, discover what others are cooking, and keep your own recipe collection close.",
     tags: ["Flutter", "Dart", "Riverpod", "Supabase"],
