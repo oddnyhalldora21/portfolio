@@ -37,6 +37,12 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Hide the scrollbar (the page still scrolls normally). */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
