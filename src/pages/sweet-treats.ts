@@ -92,8 +92,9 @@ export function renderSweetTreats(): HTMLElement {
     section(
       "About",
       prose(
-        "Sweet Treats is a baking and dessert recipe app I built with Flutter and Supabase. It's a place to find something sweet to bake, keep the recipes you love, and write down your own, with photos, notes and bake times so you never forget the little tip that made it perfect.",
-        "Under the frosting it's a real full-stack project: state management with Riverpod, a Postgres backend with sign-in and photo storage, and security rules so everyone's recipes stay their own.",
+        "Sweet Treats is a recipe app and social platform for home cooks and bakers. Share what you make, discover what others are cooking, and keep your own recipe collection close, with photos, notes and bake times so you never forget the little tip that made it perfect.",
+        "Your kitchen can be as open or as cozy as you like. Choose a public or private profile, and post your recipes publicly to share them with the community, or keep family favourites just for yourself.",
+        "It's a cross-platform mobile app built with Flutter, and under the frosting it's a real full-stack project: state management with Riverpod, a Postgres backend with sign-in and photo storage, and security rules so everyone's recipes stay their own. It's still in development, with an App Store launch planned.",
       ),
     ),
 
