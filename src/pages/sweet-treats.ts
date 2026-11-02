@@ -81,7 +81,7 @@ export function renderSweetTreats(): HTMLElement {
     backLink(),
 
     projectHero({
-      status: { kind: "in-development", label: "MVP · In development" },
+      status: { kind: "in-development", label: "In development · App Store launch planned" },
       title: "Sweet Treats",
       lead: "A cosy little recipe box for bakers. Around 300 cakes, cookies and desserts in your pocket, with room for your own.",
       tags: ["Flutter", "Dart", "Riverpod", "Supabase"],
