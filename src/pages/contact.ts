@@ -31,7 +31,7 @@ export function renderContact(): HTMLElement {
           h(
             "a",
             { class: "contact-list__link", href: INSTAGRAM_URL, target: "_blank", rel: "noopener noreferrer" },
-            "instagram/oddny21",
+            "instagram.com/oddny21",
           ),
         ),
         item(
