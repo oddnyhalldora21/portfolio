@@ -5,20 +5,8 @@ import {
   projectHero,
   prose,
   section,
-  shotGrid,
   stackList,
-  type Media,
 } from "./project-parts";
-
-/**
- * Screenshots: put the files in /public/images/article-api/ and set `src`
- * below, e.g. "/images/article-api/postman.png". To drop the screenshot row
- * entirely, remove `shotGrid(...)` from the page below.
- */
-const screenshots: Media[] = [
-  { label: "A request in Postman", alt: "Creating an author with a POST request in Postman" },
-  { label: "A validation error", alt: "The API answering a bad request with a 400 validation error" },
-];
 
 type Method = "GET" | "POST" | "DELETE";
 
@@ -142,8 +130,6 @@ export function renderArticleApi(): HTMLElement {
         "The real focus was doing the backend basics properly: checking every piece of incoming data, and making sure that when something goes wrong, the API says so clearly and in the same way every time.",
       ),
     ),
-
-    shotGrid(screenshots, "wide"),
 
     section("What it does", featureList(features)),
 
