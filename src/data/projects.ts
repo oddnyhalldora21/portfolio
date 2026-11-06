@@ -52,7 +52,7 @@ export const projects: Project[] = [
     status: { kind: "completed", label: "Completed · Backend" },
     description:
       "A REST API for articles and authors, with Zod validation and consistent, friendly error responses across every endpoint.",
-    // TODO: add the GitHub repo URL, e.g. repo: "https://github.com/oddnyhalldora21/…",
+    repo: "https://github.com/oddnyhalldora21/tix-api",
     tags: ["TypeScript", "Node.js", "Express", "Zod"],
     page: "/projects/article-api",
   },
