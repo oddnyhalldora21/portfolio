@@ -15,6 +15,8 @@
   --success-bg: #24301f;
   --error: #f2a093;
   --error-bg: #42231c;
+  --warning: #f0c27b;
+  --warning-bg: #45301a;
   --focus: #ffffff;
   --shadow: none;
 
@@ -820,6 +822,10 @@ a {
   gap: 2rem;
 }
 
+.prose + .endpoints {
+  margin-top: 1.75rem;
+}
+
 .endpoints__list {
   margin: 0.75rem 0 0;
   padding: 0;
@@ -853,6 +859,10 @@ a {
   color: var(--accent);
 }
 
+.endpoints__method--put {
+  color: var(--warning);
+}
+
 .endpoints__method--delete {
   color: var(--error);
 }
@@ -869,6 +879,18 @@ a {
   font-size: 0.95rem;
 }
 
+.endpoints__auth {
+  margin-left: 0.6rem;
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-faded);
+  vertical-align: 0.1em;
+}
+
 @media (max-width: 40rem) {
   .endpoints__list li {
     grid-template-columns: 4.5rem 1fr;
@@ -878,37 +900,89 @@ a {
   }
 }
 
-/* Request / response examples. */
-.code-examples {
+/* Request → response examples (API project). */
+.api-examples {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 2.75rem);
   margin-top: 1.75rem;
 }
 
-.code-example {
+.api-example {
   margin: 0;
+  min-width: 0;
 }
 
-.code-example__label {
-  margin-bottom: 0.5rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-faded);
+.api-example__caption {
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
 }
 
-.code-block {
-  margin: 0;
-  padding: 1.1rem 1.25rem;
+.api-example__box {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.api-example__request,
+.api-example__response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.6rem;
+  padding: 1rem 1.25rem 1.1rem;
+  min-width: 0;
+}
+
+.api-example__response {
+  border-top: 1px solid var(--border);
+  background: rgb(0 0 0 / 0.14);
+}
+
+.api-example__line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin: 0;
+  min-width: 0;
+}
+
+.api-example__line .endpoints__path {
+  overflow-wrap: anywhere;
+}
+
+.api-example__status {
+  padding: 0.2em 0.6em;
+  border-radius: 0.35rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.api-example__status--ok {
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.api-example__status--warn {
+  color: var(--warning);
+  background: var(--warning-bg);
+}
+
+/* Long JSON scrolls sideways instead of stretching the page. */
+.api-example__code {
+  margin: 0;
   overflow-x: auto;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.85rem;
   line-height: 1.6;
   color: var(--text);
+  white-space: pre;
+}
+
+.api-example__code--muted {
+  color: var(--text-faded);
 }
 
 /* ---------- Contact ---------- */
