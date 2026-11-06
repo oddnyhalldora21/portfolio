@@ -4,7 +4,7 @@ import { renderHome } from "./pages/home";
 import { renderContact } from "./pages/contact";
 import { renderSweetTreats } from "./pages/sweet-treats";
 import { renderLlumStudio } from "./pages/llum-studio";
-import { renderArticleApi } from "./pages/article-api";
+import { renderTixApi } from "./pages/tix-api";
 
 const SITE_NAME = "Oddný Halldóra";
 
@@ -17,7 +17,7 @@ const routes: Record<string, Route> = {
   "/": { title: SITE_NAME, render: renderHome },
   "/contact": { title: `Contact — ${SITE_NAME}`, render: renderContact },
   "/projects/llum-studio": { title: `Llum Studio — ${SITE_NAME}`, render: renderLlumStudio },
-  "/projects/article-api": { title: `Article & Author API — ${SITE_NAME}`, render: renderArticleApi },
+  "/projects/tix-api": { title: `Tix API — ${SITE_NAME}`, render: renderTixApi },
   "/projects/sweet-treats": { title: `Sweet Treats — ${SITE_NAME}`, render: renderSweetTreats },
 };
 
