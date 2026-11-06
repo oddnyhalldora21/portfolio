@@ -48,12 +48,12 @@ export const projects: Project[] = [
     page: "/projects/sweet-treats",
   },
   {
-    title: "Article & Author API",
+    title: "Tix API",
     status: { kind: "completed", label: "Completed · Backend" },
     description:
-      "A REST API for articles and authors, with Zod validation and consistent, friendly error responses across every endpoint.",
+      "A REST API for booking concert and event tickets, with sign-in, Zod validation and database transactions that keep ticket counts in sync.",
     repo: "https://github.com/oddnyhalldora21/tix-api",
-    tags: ["TypeScript", "Node.js", "Express", "Zod"],
-    page: "/projects/article-api",
+    tags: ["TypeScript", "Node.js", "Express", "PostgreSQL", "Zod"],
+    page: "/projects/tix-api",
   },
 ];
