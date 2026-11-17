@@ -11,6 +11,8 @@ export interface Media {
   label: string;
   alt: string;
   src?: string;
+  /** Still image shown before a video starts playing. */
+  poster?: string;
 }
 
 /** "phone" is tall like an app screen; "wide" is landscape like a website. */
@@ -36,15 +38,21 @@ export function mediaBlock(
     );
   }
   if (kind === "video") {
-    return h("video", {
+    const video = h("video", {
       class: `media-frame ${shapeClass}`,
       src: media.src,
+      poster: media.poster,
       autoplay: true,
       muted: true,
       loop: true,
       playsinline: true,
+      preload: "metadata",
       "aria-label": media.alt,
     });
+    // Browsers only autoplay muted videos, and the attribute alone doesn't
+    // mute a video created from script.
+    video.muted = true;
+    return video;
   }
   return h("img", {
     class: `media-frame ${shapeClass}`,
