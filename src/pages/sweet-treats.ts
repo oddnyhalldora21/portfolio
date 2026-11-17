@@ -15,7 +15,12 @@ import {
  * Photos and video: put the files in /public/images/sweet-treats/ and set
  * `src` below, e.g. "/images/sweet-treats/home.png" or ".../demo.mp4".
  */
-const demoVideo: Media = { label: "Demo video", alt: "Sweet Treats app demo" };
+const demoVideo: Media = {
+  label: "Demo video",
+  alt: "A walk through the Sweet Treats app: logging in, browsing recipes and categories, and the profile page",
+  src: "/images/sweet-treats/demo.mp4",
+  poster: "/images/sweet-treats/demo-poster.jpg",
+};
 
 const screenshots: Media[] = [
   { label: "Home", alt: "Sweet Treats home screen", src: "/images/sweet-treats/home.jpg" },
